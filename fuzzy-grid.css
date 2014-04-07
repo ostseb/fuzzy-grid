@@ -1,10 +1,9 @@
 .grid-row {
-	margin-bottom: .5em;
 	display: block;
 }
 
-.grid-row.nomargin {
-	margin-bottom: 0;
+.grid-row.margin {
+	margin-top: .5em;
 }
 
 .grid-row:after {
@@ -21,9 +20,13 @@
 	margin-left: 2%;
 	min-height: 1px;
 }
+.grid-row .right[class*="span_"] {
+	float: right;
+}
 
 .grid-row [class*="span_"]:first-child,
-.grid-row [class*="span_"].nomargin {margin-left: 0%;}
+.grid-row [class*="span_"].nomargin,
+.grid-row .span_12 {margin-left: 0%;}
 
 .grid-row .span_1 { width: 6.5%; }
 .grid-row .span_2 { width: 15.0%; }
@@ -37,3 +40,10 @@
 .grid-row .span_10 { width: 83.0%; }
 .grid-row .span_11 { width: 91.5%; }
 .grid-row .span_12 { width: 100%; }
+
+@media all and (max-width: 600px) {
+	.grid-row:not(.nobr) {margin-bottom: 0;}
+	.grid-row .br[class*="span_"],
+	.grid-row:not(.nobr)>[class*="span_"] {width: 100%;margin: .5em 0;}
+	.grid-row:not(.nobr)>[class*="span_"]>[class*="span_"] {margin: .1em 0;}
+}
