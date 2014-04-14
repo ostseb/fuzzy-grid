@@ -20,9 +20,13 @@
 	margin-left: 2%;
 	min-height: 1px;
 }
+
 .grid-row .right[class*="span_"] {
 	float: right;
 }
+
+.grid-row [class*="span_"].padding-right {padding-right: 2%;}
+.grid-row [class*="span_"].padding-left {padding-left: 2%;}
 
 .grid-row [class*="span_"]:first-child,
 .grid-row [class*="span_"].nomargin,
@@ -40,6 +44,19 @@
 .grid-row .span_10 { width: 83.0%; }
 .grid-row .span_11 { width: 91.5%; }
 .grid-row .span_12 { width: 100%; }
+
+.grid-row .width.nomargin.span_1 { width: 8.5%; }	 /* wrong */
+.grid-row .width.nomargin.span_2 { width: 17.0%; }	/* wrong */
+.grid-row .width.nomargin.span_3 { width: 25.5%; }	/* wrong */
+.grid-row .width.nomargin.span_4 { width: 34.0%; }
+.grid-row .width.nomargin.span_5 { width: 42.5%; }	/* wrong */
+.grid-row .width.nomargin.span_6 { width: 51.0%; }	/* wrong */
+.grid-row .width.nomargin.span_7 { width: 59.5%; }	/* wrong */
+.grid-row .width.nomargin.span_8 { width: 68.0%; }	/* wrong */
+.grid-row .width.nomargin.span_9 { width: 76.5%; }	/* wrong */
+.grid-row .width.nomargin.span_10 { width: 85.0%; }   /* wrong */
+.grid-row .width.nomargin.span_11 { width: 93.5%; }   /* wrong */
+.grid-row .width.nomargin.span_12 { width: 100%; }	/* wrong */
 
 @media all and (max-width: 600px) {
 	.grid-row:not(.nobr) {margin-bottom: 0;}
